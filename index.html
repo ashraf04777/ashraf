@@ -91,7 +91,7 @@ body {
 </head>
 <body>
     <div class="form-container">
-        <form class="form-box" method="post" name="google-sheet">
+        <form class="form-box" method="post" name="google-sheet" action="/Response.html">
             <h2>Registration Form</h2>
             <input type="text" placeholder="Name" name="Name" required>
             <input type="email" placeholder="Email" name="Email" required>
@@ -109,8 +109,7 @@ body {
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-                .catch(error => console.error('Error!', error.message))
+                
             })
           </script>
 </body>
